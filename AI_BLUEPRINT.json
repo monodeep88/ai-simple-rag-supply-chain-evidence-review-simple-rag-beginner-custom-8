@@ -1,0 +1,144 @@
+{
+  "mode": "ai",
+  "project_title": "Supply Chain Evidence Review Simple RAG",
+  "short_description": "A beginner-friendly RAG project for reviewing supply chain evidence",
+  "domain_summary": "Supply Chain Evidence Review involves analyzing data from various sources to identify trends, risks, and opportunities in a supply chain. This project aims to create a simple RAG (Red, Amber, Green) system to categorize evidence based on its significance and impact.",
+  "user_persona": "Supply Chain Analyst: A beginner analyst responsible for reviewing supply chain evidence to identify trends and risks.",
+  "architecture_notes": [
+    "Use Docker to containerize services for easy deployment and management",
+    "Implement API Gateway to handle incoming requests and route them to respective services",
+    "Use PostgreSQL as the database to store and manage data"
+  ],
+  "backend_modules": [
+    "Data Ingestion Module (FastAPI)",
+    "Data Processing Module (Python)",
+    "Data Visualization Module (React)"
+  ],
+  "frontend_features": [
+    "User-friendly interface for data visualization",
+    "Filtering and sorting capabilities for evidence review",
+    "RAG system for categorizing evidence"
+  ],
+  "data_sources": [
+    "Supply chain data from various sources (e.g., CSV, Excel)",
+    "External data sources (e.g., APIs, databases)"
+  ],
+  "testing_strategy": [
+    "Unit testing and integration testing using Pytest and Jest"
+  ],
+  "starter_questions": [
+    "What is the purpose of the RAG system?",
+    "How will we categorize evidence?",
+    "What data sources will we use?"
+  ],
+  "workflow_steps": [
+    "Data ingestion and processing",
+    "Evidence categorization using RAG system",
+    "Data visualization and analysis"
+  ],
+  "business_rules": [
+    "Evidence must be categorized based on its significance and impact",
+    "RAG system must be user-friendly and easy to understand"
+  ],
+  "sample_documents": [
+    {
+      "filename": "supply_chain_data.csv",
+      "content": "Date,Supplier,Product,Quantity\n2022-01-01,Supplier A,Product X,100\n2022-01-02,Supplier B,Product Y,200"
+    },
+    {
+      "filename": "evidence_review_template.docx",
+      "content": "Evidence Review Template\n\nDate: {date}\nSupplier: {supplier}\nProduct: {product}\nQuantity: {quantity}\n\nRAG Category: {category}"
+    }
+  ],
+  "tool_catalog": [
+    {
+      "name": "Docker",
+      "description": "Containerization platform for easy deployment and management"
+    },
+    {
+      "name": "FastAPI",
+      "description": "Python web framework for building APIs"
+    },
+    {
+      "name": "React",
+      "description": "JavaScript library for building user interfaces"
+    }
+  ],
+  "agent_plan": [
+    {
+      "name": "Architecture Agent",
+      "role": "Define app boundaries, data flow, runtime stack, and integration points.",
+      "outputs": [
+        "Use Docker to containerize services for easy deployment and management",
+        "Implement API Gateway to handle incoming requests and route them to respective services",
+        "Use PostgreSQL as the database to store and manage data"
+      ]
+    },
+    {
+      "name": "Backend Agent",
+      "role": "Design FastAPI modules, service contracts, validation, and error handling.",
+      "outputs": [
+        "Data Ingestion Module (FastAPI)",
+        "Data Processing Module (Python)",
+        "Data Visualization Module (React)"
+      ]
+    },
+    {
+      "name": "Frontend Agent",
+      "role": "Design React screens, state flow, controls, and user feedback states.",
+      "outputs": [
+        "User-friendly interface for data visualization",
+        "Filtering and sorting capabilities for evidence review",
+        "RAG system for categorizing evidence"
+      ]
+    },
+    {
+      "name": "Database Agent",
+      "role": "Design persistence models, sample data, indexes, and audit records.",
+      "outputs": [
+        "Run history",
+        "Source document metadata",
+        "Generated workflow audit records"
+      ]
+    },
+    {
+      "name": "Testing Agent",
+      "role": "Define contract tests, smoke tests, and generated project validation.",
+      "outputs": [
+        "Unit testing and integration testing using Pytest and Jest"
+      ]
+    },
+    {
+      "name": "DevOps Agent",
+      "role": "Define environment variables, Docker workflow, and repository packaging.",
+      "outputs": [
+        "Docker-ready project",
+        "Environment sample file",
+        "GitHub repository upload"
+      ]
+    },
+    {
+      "name": "Reviewer Agent",
+      "role": "Review the generated plan for completeness, security, and portfolio quality.",
+      "outputs": [
+        "Data ingestion and processing",
+        "Evidence categorization using RAG system",
+        "Data visualization and analysis"
+      ]
+    }
+  ],
+  "model_provider": "groq",
+  "model_name": "llama-3.1-8b-instant",
+  "fallback_reason": "OpenAI limit reached. Automatically switched to Groq.",
+  "architecture": "PDF FAQ Knowledge Bot",
+  "architecture_template_id": 2,
+  "architecture_template_path": "templates/simple-rag/pdf-faq-knowledge-bot",
+  "architecture_description": "PDF FAQ Knowledge Bot for answering repeat questions from uploaded documents.",
+  "validation_pipeline": [
+    "pytest",
+    "npm install",
+    "npm run build",
+    "docker compose config",
+    "docker compose build"
+  ]
+}
